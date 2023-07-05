@@ -5,16 +5,16 @@
 用法:
 ```csharp
 builder.Services.AddMemoryMQ();
-``
+```
 
 生产者:
 ```csharp
 await _producer.ProduceAsync(channel, value);
-``
+```
 
 ```csharp
 await _producer.ProduceAsync(channel, key, value);
-``
+```
 
 消费者:
 ```csharp
