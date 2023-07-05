@@ -1,13 +1,13 @@
 # Soda.MemoryMQ
 
-Ö§³Ö¶àChannel¡¢key-value¡£
+æ”¯æŒå¤šChannelã€key-valueã€‚
 
-ÓÃ·¨:
+ç”¨æ³•:
 ```csharp
 builder.Services.AddMemoryMQ();
 ``
 
-Éú²úÕß:
+ç”Ÿäº§è€…:
 ```csharp
 await _producer.ProduceAsync(channel, value);
 ``
@@ -16,7 +16,7 @@ await _producer.ProduceAsync(channel, value);
 await _producer.ProduceAsync(channel, key, value);
 ``
 
-Ïû·ÑÕß:
+æ¶ˆè´¹è€…:
 ```csharp
 consumer.OnMessage("test", async (message) =>
 {
@@ -25,4 +25,4 @@ consumer.OnMessage("test", async (message) =>
         Console.WriteLine($"Key: test, Value: {message.ToString()}");
     }, stoppingToken);
 });
-``
+```
